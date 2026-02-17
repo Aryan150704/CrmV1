@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini CRM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Mini CRM - Lead Management</h2>
+
+<div class="form-container">
+    <input type="text" id="name" placeholder="Lead Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone">
+    
+    <select id="status">
+        <option value="New">New</option>
+        <option value="Contacted">Contacted</option>
+        <option value="Follow-up">Follow-up</option>
+    </select>
+
+    <button onclick="addLead()">Add Lead</button>
+</div>
+
+<input type="text" id="search" placeholder="Search by name..." onkeyup="searchLeads()">
+
+<select id="filter" onchange="filterStatus()">
+    <option value="All">All</option>
+    <option value="New">New</option>
+    <option value="Contacted">Contacted</option>
+    <option value="Follow-up">Follow-up</option>
+</select>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="lead-table">
+    </tbody>
+</table>
+
+<script src="app.js"></script>
+</body>
+</html>
